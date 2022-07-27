@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('likes');
             $table->integer('views');
             $table->unsignedBigInteger('article_id');
+            $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
             //$table->timestamps();
         });
     }
