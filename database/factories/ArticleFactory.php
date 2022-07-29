@@ -23,7 +23,7 @@ class ArticleFactory extends Factory
             'title' => $title,
             'slug' => $slug,
             'body' => $this->faker->paragraph(100, true),
-            'img' => $this->faker->image('resources\img', 640, 480, null, false),
+            'img' => $this->faker->imageUrl(640, 480, 'cats', true, 'Faker', true),
             'created_at' => $this->faker->dateTimeBetween('-1 years')
 
         ];
