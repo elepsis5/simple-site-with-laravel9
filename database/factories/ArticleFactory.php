@@ -19,11 +19,12 @@ class ArticleFactory extends Factory
     {
         $title = $this->faker->sentence(6, true);
         $slug = Str::substr(Str::lower(preg_replace('/\s+/', '-', $title)), 0, -1);
+        $random = rand(1,1000);
         return [
             'title' => $title,
             'slug' => $slug,
             'body' => $this->faker->paragraph(100, true),
-            'img' => $this->faker->imageUrl(640, 480, 'cats', true, 'Faker', true),
+            'img' => 'https://picsum.photos/id/'. $random . '/200/100',
             'created_at' => $this->faker->dateTimeBetween('-1 years')
 
         ];

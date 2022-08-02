@@ -5,8 +5,7 @@
  */
 
 require('./bootstrap');
-require('./site/main');
-require('./site/owl.carousel.min');
+require('./site/scripts');
 
 
 window.Vue = require('vue').default;
