@@ -27,7 +27,7 @@
                             <div class="mt-4">
                                 Tags:
                                 @foreach ($article->tags as $tag)
-                                <a href=" route('article.tag', $tag->id) " class="badge bg-danger">{{$tag->label}}</a>
+                                <a href=" route('article.tag', $tag->id) " class="badge tag">{{$tag->label}}</a>
                                 @endforeach
                             </div>
                         </div>

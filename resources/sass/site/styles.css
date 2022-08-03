@@ -363,3 +363,6 @@ html {
 .card {
     height: 100% !important;
 }
+.tag {
+    color: rgba(108, 117, 125) !important;
+}

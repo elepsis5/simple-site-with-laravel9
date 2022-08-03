@@ -36,7 +36,7 @@
             </div>
             <button class="btn btn-success" type="submit">Submit</button>
         </form>
-        <div class="toast-container pb-5 mx-auto">
+        <div class="toast-container mt-5 pb-5 mx-auto">
             @foreach($article->comments as $comment)
                 <div class="toast showing" style="width: 100%">
                     <div class="toast-header">
