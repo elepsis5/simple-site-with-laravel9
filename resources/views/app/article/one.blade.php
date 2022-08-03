@@ -16,21 +16,25 @@
                 @endforeach
             </p>
             <p class="card-text">{{$article->body}}</p>
-            <p>Опубликовано: {{$article->createdAtForHumans()}}</p>
+            <p>Published: {{$article->createdAtForHumans()}}</p>
+            <div class="mt-3">
+                <span class="badge state">{{$article->state->likes}} <i class="bi bi-heart"></i></span>
+                <span class="badge state">{{$article->state->views}} <i class="bi bi-eye"></i></span>
+            </div>
         </div>
     </div>
     <hr>
     <div class="row comments-container">
         <form class="mx-auto" action="#" method="">
             <div class="mb-3">
-                <label for="commentSubject" class="form-label">Тема комментария</label>
+                <label for="commentSubject" class="form-label">Comment's subject</label>
                 <input type="text" class="form-control" id="commentSubject">
             </div>
             <div class="mb-3">
-                <label for="commentBody" class="form-label">Комментарий</label>
+                <label for="commentBody" class="form-label">Comment</label>
                 <textarea class="form-control" id="commentBody" rows="3"></textarea>
             </div>
-            <button class="btn btn-success" type="submit">Отправить</button>
+            <button class="btn btn-success" type="submit">Submit</button>
         </form>
         <div class="toast-container pb-5 mx-auto">
             @foreach($article->comments as $comment)

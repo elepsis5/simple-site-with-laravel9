@@ -10,21 +10,25 @@
             </div>
             <!-- About Section Content-->
             <div class="row">
-                <div class="col-lg-4 ms-auto">
-                    <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download
-                        includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS
-                        stylesheets for easy customization.</p>
+                <div class="col-lg-6 ms-auto">
+                    <p class="lead">
+                    <i class="bi bi-caret-right-fill"> Небольшой сайт с интерфейсом отображения статей.</i><br>
+                    <i class="bi bi-caret-right-fill"> Вся логика реализована стандартным функционалом Laravel 7+.</i><br>
+                    <i class="bi bi-caret-right-fill"> Отдельная страница с выводом всех статей с пагинацией.</i><br>
+                    </p>
                 </div>
-                <div class="col-lg-4 me-auto">
-                    <p class="lead">You can create your own custom avatar for the masthead, change the icon in the
-                        dividers, and add your email address to the contact form to make it fully functional!</p>
+                <div class="col-lg-6 me-auto">
+                    <p class="lead"><i class="bi bi-caret-right-fill"> Стилизация на основе Bootstrap v5.1.</i><br>
+                    <i class="bi bi-caret-right-fill"> Наполнение тестовыми данными с использование фабрик и сидеров.</i><br>
+                    <i class="bi bi-caret-right-fill"></i><br>
+                </p>
                 </div>
             </div>
             <!-- About Section Button-->
             <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
-                    <i class="fas fa-download me-2"></i>
-                    Free Download!
+                <a class="btn btn-xl btn-outline-light" href="https://github.com/elepsis5/simple-site-with-laravel9.git">
+                <i class="bi bi-github"></i>
+                    Go to GitHub!
                 </a>
             </div>
         </div>
