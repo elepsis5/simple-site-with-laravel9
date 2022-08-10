@@ -18,7 +18,7 @@ class Article extends Model
     public function tags() {
         return $this->belongsToMany(Tag::class);
     }
-    public function State() {
+    public function state() {
         return $this->hasOne(State::class);
     }
 

@@ -14,5 +14,5 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-text.txt
+test.txt
 /public/helper.php

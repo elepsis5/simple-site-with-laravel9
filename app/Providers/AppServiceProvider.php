@@ -31,8 +31,11 @@ class AppServiceProvider extends ServiceProvider
     }
 
     public function trueLinks() {
-        View::composer('layouts.app', function($view){
+        View::composer('app.sections.header', function($view){
             $view->with('homeLink', request()->is('/')? '#masthead' : route('home'));
+            $view->with('articlesLink', request()->is('/')? '#articles' : route('articlesAll'));
+            $view->with('aboutLink', request()->is('/')? '#about' : route('about'));
+
         });
     }
 }

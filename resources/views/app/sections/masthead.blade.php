@@ -5,13 +5,13 @@
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/pic1.jpg" class="d-block w-100" alt="...">
+                    <img src="img/pic1.jpg" class="d-block" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/pic2.jpg" class="d-block w-100" alt="...">
+                    <img src="img/pic2.jpg" class="d-block" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/pic3.jpg" class="d-block w-100" alt="...">
+                    <img src="img/pic3.jpg" class="d-block" alt="...">
                 </div>
             </div>
 

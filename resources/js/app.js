@@ -1,34 +1,34 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./bootstrap');
 require('./site/scripts');
 
-
 window.Vue = require('vue').default;
+import { createApp } from 'vue';
+//import { createStore } from 'vuex'
+import  store  from './store';
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+//Vue.component('article-component', require('./components/ArticleComponent.vue').default);
+//Vue.component('test-component', require('./components/TestComponent.vue').default);
+import articleComponent from './components/ArticleComponent.vue';
+import viewsComponent from './components/ViewsComponent.vue';
+import likesComponent from './components/LikesComponent.vue';
+import commentComponent from './components/CommentComponent.vue';
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+const app = createApp({
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+    created() {
+        let url = window.location.pathname
+        let slug = url.substring(url.lastIndexOf('/')+1)
 
-const app = new Vue({
-    el: '#app',
+        this.$store.commit('SET_SLUG', slug)
+        this.$store.dispatch('getArticleData', slug)
+        this.$store.dispatch('viewsIncrement', slug)
+    }
 });
+
+app.component('article-component' , articleComponent);
+app.component('views-component' , viewsComponent);
+app.component('likes-component' , likesComponent);
+app.component('comment-component' , commentComponent);
+
+app.use(store).mount("#app");

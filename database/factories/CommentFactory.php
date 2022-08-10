@@ -16,9 +16,11 @@ class CommentFactory extends Factory
      */
     public function definition()
     {
+        $random = rand(1,1000);
         return [
             'subject' => $this->faker->sentence(7, true),
             'body' => $this->faker->paragraph(3, true),
+            'img' => 'https://picsum.photos/id/'. $random . '/50/50',
             'created_at' => $this->faker->dateTimeBetween('-10 month')
         ];
     }

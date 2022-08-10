@@ -342,17 +342,15 @@ html {
     width: 100%;
     top: 6rem;
 }
-.carousel-item img {
-    height: 60rem;
-}
+
 .masthead button {
-    height: 66rem;
+    height: 96rem;
 }
 #masthead {
-    height: 66rem;
+    height: 96rem;
 }
 .bg-opacity{
-    background: rgba(13, 202, 240, 0.3) !important;
+    background: rgba(13, 202, 240, 0.2) !important;
 }
 .comments-container {
     margin: 1rem 1rem 1rem !important;

@@ -12,3 +12,9 @@ composer require laravel/ui
         "dev": "vite",
         "build": "vite build"
     },
+
+
+php artisan make:resource ArticleResource
+php artisan make:resource TagResource
+php artisan make:resource CommentResource
+php artisan make:resource StateResource

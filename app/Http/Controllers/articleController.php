@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class articleController extends Controller
 {
     public function articleIndex() {
-        $articles = Article::getByPagination(10);
+        $articles = Article::getByPagination(9);
         return view('app.article.index', compact('articles'));
     }
 

@@ -1,35 +1,41 @@
 <template>
-    <span @click="addLike()" class="badge likesButton" :class="isLike ? 'bg-primary': 'bg-danger'">{{ articleLikes }} <i class="far fa-thumbs-up"></i></span>
+
+    <span @click="addLike" class="badge state likesButton">{{likes}}
+        <span v-if="isLike">
+            <i class="bi bi-heart"></i>
+        </span>
+        <span v-else>
+            <i class="bi bi-heart-fill"></i>
+        </span>
+    </span>
+
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
     computed: {
-        isLike(){
-            return this.$store.state.article.likeIt;
+        likes() {
+            return this.$store.getters.articleLikes;
         },
-        ...mapGetters('article', ['articleLikes']),
+        isLike() {
+            return this.$store.state.like;
+        }
     },
     methods: {
-        addLike(){
-            this.$store.dispatch('article/addLike', {
-                slug : this.$store.state.slug,
+        addLike() {
+            this.$store.dispatch('addLike', {
+                slug: this.$store.state.slug,
                 increment: this.isLike
             })
         }
-    },
-    mounted() {
-        console.log('Component mounted.')
     }
 }
 </script>
 
 <style scoped>
 
-.likesButton {
-    cursor: pointer;
-}
+    .likesButton {
+        cursor:pointer;
+    }
 
 </style>

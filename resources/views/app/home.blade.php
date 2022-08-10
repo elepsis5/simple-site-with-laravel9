@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('header')
+    @include('app.sections.header')
+@endsection
+
 @section('masthead')
     @include('app.sections.masthead')
 @endsection
