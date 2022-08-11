@@ -20,10 +20,9 @@
             </div>
             <div class="col-lg-6 me-auto">
                 <p class="lead">
-                    <i class="bi bi-caret-right-fill"> Вся логика реализована на основе стандартных инструментов Laravel.</i><br>
                     <i class="bi bi-caret-right-fill"> Отдельная страница с выводом всех статей с пагинацией.</i><br>
                     <i class="bi bi-caret-right-fill"> Наполнение тестовыми данными с использование фабрик и сидеров.</i><br>
-                    <i class="bi bi-caret-right-fill"> Отдельная страница с выводом всех статей с пагинацией.</i><br>
+                    <i class="bi bi-caret-right-fill"> Вся логика реализована на основе стандартных инструментов Laravel.</i><br>
                     <i class="bi bi-caret-right-fill"> Стилизация на основе Bootstrap v5.1.</i><br>
                 </p>
             </div>
