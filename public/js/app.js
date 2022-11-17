@@ -24107,8 +24107,9 @@ var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
     var url = window.location.pathname;
     var slug = url.substring(url.lastIndexOf('/') + 1);
     this.$store.commit('SET_SLUG', slug);
-    this.$store.dispatch('getArticlesData'); // this.$store.dispatch('getArticleData', slug)
-    // this.$store.dispatch('viewsIncrement', slug)
+    this.$store.dispatch('getArticlesData');
+    this.$store.dispatch('getArticleData', slug);
+    this.$store.dispatch('viewsIncrement', slug);
   }
 });
 app.component('article-component', _components_ArticleComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]);

@@ -24,8 +24,8 @@ const app = createApp({
 
         this.$store.commit('SET_SLUG', slug)
         this.$store.dispatch('getArticlesData')
-        // this.$store.dispatch('getArticleData', slug)
-        // this.$store.dispatch('viewsIncrement', slug)
+        this.$store.dispatch('getArticleData', slug)
+        this.$store.dispatch('viewsIncrement', slug)
     }
 });
 
