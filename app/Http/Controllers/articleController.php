@@ -12,8 +12,7 @@ class articleController extends Controller
         return view('app.article.index', compact('articles'));
     }
 
-    public function articleOne($slug) {
-        $article = Article::getBySlug($slug);
-        return view('app.article.one', compact('article'));
+    public function articleOne() {
+        return view('app.article.one');
     }
 }

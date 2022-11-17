@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\articleController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Route::get('/articles', [ArticleController::class, 'articleIndex'])->name('artic
 Route::get('/articles/{slug}', [ArticleController::class, 'articleOne'])->name('articleOne');
 
 Route::get('/#about', [HomeController::class, 'index'])->name('about');
+
+Route::resource('/admin', AdminController::class);

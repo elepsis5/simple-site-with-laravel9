@@ -6,6 +6,7 @@ import Vuex from 'vuex'
 
 export default new Vuex.Store({
     state: {
+        articles: {},
         article: {
             comments:[],
             tags: [],
@@ -20,6 +21,14 @@ export default new Vuex.Store({
     },
 
     actions: {
+        getArticlesData(context, payload) {
+            axios.get('/api/admin').then((response)=>{
+                console.log(response.data);
+                context.commit('SET_ARTICLES', response.data);
+            }).catch(()=>{
+                console.log('Error');
+            });
+        },
         getArticleData(context, payload) {
             axios.get('/api/article-json', {params: {slug:payload}}).then((response)=>{
                 console.log(response.data.data);
@@ -58,6 +67,11 @@ export default new Vuex.Store({
     },
 
     getters: {
+        paginateLinks(state) {
+            if(state.articles) {
+                return state.articles
+            }
+        },
 
         articleLikes(state) {
             return state.article.state.likes;
@@ -69,6 +83,9 @@ export default new Vuex.Store({
     },
 
     mutations: {
+        SET_ARTICLES(state, payload){
+            return state.articles = payload;
+        },
         SET_ARTICLE(state, payload){
             return state.article = payload;
         },

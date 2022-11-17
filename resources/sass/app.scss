@@ -18,4 +18,27 @@
 // site
 @import './site/styles.css';
 
+.admin-content-list {
+  flex: auto;
+  margin: 5vw 15vw 5vw 5vw;
+    img {
+      width: 8vw;
+    }
+}
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 94.5vh;
+}
+.content-wrapper {
+  flex: 1 0 auto;
+  margin: 7rem 1rem 1rem 1rem;
+}
+.flex-container {
+  display: flex;
+  min-height: 80vh;
+}
+.footer {
+  min-height: 5vh;
 
+}
